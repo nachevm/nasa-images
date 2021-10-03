@@ -1,0 +1,16 @@
+plugins {
+    id "application"
+}
+
+application {
+    mainClass.set("com.nasa.images.ConsoleApp")
+}
+
+dependencies {
+    implementation project(":mars-rover-api")
+    implementation project(":mars-rover-http-adapter")
+    implementation project(":cache-api")
+    implementation project(":cache-file-adapter")
+    implementation "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+}

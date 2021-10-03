@@ -1,0 +1,13 @@
+rootProject.name = 'nasa-images'
+
+include ':console-app'
+
+include ':mars-rover-api'
+project(':mars-rover-api').projectDir = file('mars-rover/api')
+include ':mars-rover-http-adapter'
+project(':mars-rover-http-adapter').projectDir = file('mars-rover/http-adapter')
+
+include ':cache-api'
+project(':cache-api').projectDir = file('cache/api')
+include ':cache-file-adapter'
+project(':cache-file-adapter').projectDir = file('cache/file-adapter')

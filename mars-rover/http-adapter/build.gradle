@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(":mars-rover-api")
+    implementation project(":cache-api")
+    implementation "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+}

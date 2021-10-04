@@ -31,7 +31,7 @@ public class ConsoleApp {
     return commands.stream()
         .filter(c -> args.length > 0 ? c.getName().equalsIgnoreCase(args[0]) : c != null)
         .findFirst()
-        .orElseThrow(CommandUnknownException::new)
+        .orElseThrow(UnknownArgumentException::new)
         .execute(args);
   }
 }

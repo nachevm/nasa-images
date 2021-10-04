@@ -1,4 +1,4 @@
-# NASA images API
+# Description
 
 API that can be used to display daily images from the rovers that are on Mars. By default, gets the navigation camera images from the
 curiosity rover from the last 10 days and limits the number of images to 3 per day.
@@ -19,4 +19,39 @@ File->Settings->Editor->Code Style
 
 ## **How to use**
 
-```./gradlew console-app:run```
+For default configuration run: ```./gradlew console-app:run```
+<br>
+For advanced configuration run: ```./gradlew console-app:run --args='<command-name> -arg1 val1 -arg2 val2'```
+
+<table>
+    <thead>
+        <tr>
+            <th>Commands</th>
+            <th>Arguments</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4>mars-rover</td>
+            <td>rover</td>
+            <td>CURIOSITY</td>
+        </tr>
+        <tr>
+            <td>camera</td>
+            <td>NAVCAM</td>
+        </tr>
+        <tr>
+            <td>days</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>imagesLimit</td>
+            <td>3</td>
+        </tr>
+    </tbody>
+</table>
+
+Example: ```./gradlew console-app:run --args='mars-rover -days 1 -camera fhaz'```
+
+NASA's documentation can be found [here](https://api.nasa.gov/) (Browse APIs / Mars Rover Photos).
